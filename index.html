@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>VisionUp Studio - Imagens que Vendem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#0b0b0b;
+      --yellow:#ffd000;
+      --green:#00c16a;
+      --white:#ffffff;
+      --gray:#b5b5b5;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
+
+    body{
+      background:var(--black);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    header{
+      padding:20px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo{
+      font-size:1.4rem;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .logo span{color:var(--yellow);}
+
+    nav a{
+      color:var(--gray);
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    nav a:hover{color:var(--yellow);}
+
+    .hero{
+      padding:80px 40px;
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .hero h1 span{color:var(--yellow);}
+
+    .hero p{
+      color:var(--gray);
+      margin-bottom:30px;
+      font-size:1.1rem;
+    }
+
+    .cta{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn-primary{
+      background:var(--yellow);
+      color:#000;
+      padding:14px 26px;
+      border-radius:6px;
+      font-weight:700;
+      text-decoration:none;
+      transition:0.2s;
+    }
+
+    .btn-primary:hover{transform:translateY(-2px);}
+
+    .btn-secondary{
+      border:2px solid var(--green);
+      color:var(--green);
+      padding:12px 24px;
+      border-radius:6px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .mockup{
+      background:linear-gradient(145deg, #111, #1a1a1a);
+      border-radius:12px;
+      padding:30px;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .mockup h3{
+      margin-bottom:15px;
+      color:var(--green);
+    }
+
+    .mockup ul li{
+      margin-bottom:8px;
+      color:var(--gray);
+    }
+
+    section{
+      padding:80px 40px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .section-title{
+      font-size:2.2rem;
+      margin-bottom:15px;
+    }
+
+    .section-title span{color:var(--yellow);}
+
+    .section-sub{
+      color:var(--gray);
+      margin-bottom:40px;
+      max-width:700px;
+    }
+
+    .benefits{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:10px;
+      padding:25px;
+    }
+
+    .card h4{margin-bottom:10px;color:var(--green);}
+    .card p{color:var(--gray);font-size:0.95rem;}
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .product{
+      background:#111;
+      border-radius:10px;
+      padding:25px;
+      border:1px solid rgba(255,255,255,0.08);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .product h4{margin-bottom:10px;color:var(--yellow);}
+    .product p{color:var(--gray);margin-bottom:15px;}
+
+    .product img{
+      width:100%;
+      height:140px;
+      object-fit:cover;
+      border-radius:8px;
+      margin-bottom:12px;
+    }
+
+    .cta-final{
+      background:linear-gradient(145deg, #0f0f0f, #151515);
+      border-radius:14px;
+      padding:50px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .cta-final h2{margin-bottom:15px;font-size:2.2rem;}
+    .cta-final h2 span{color:var(--yellow);}
+    .cta-final p{color:var(--gray);margin-bottom:25px;}
+
+    footer{
+      text-align:center;
+      padding:30px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:var(--gray);
+      font-size:0.9rem;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero h1{font-size:2.4rem;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="logo">VisionUp <span>Studio</span></div>
+  </div>
+  <nav>
+    <a href="index.html">Ínicio</a>
+    <a href="resultados.html">Sobre</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Transformamos fotos comuns em <span>imagens que vendem</span></h1>
+    
+    <div class="cta">
+      <a href="#produtos" class="btn-primary">Ver Pacotes</a>
+      <a href="https://wa.me/5551996568285" class="btn-secondary">Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <h3>O que fazemos</h3>
+    <ul>
+      <li>✔ Melhoria profissional de fotos</li>
+      <li>✔ Ajuste de luz, cor e nitidez</li>
+      <li>✔ Estilo comercial e vendedor</li>
+      <li>✔ Padronização de imagens</li>
+      <li>✔ Pronto para redes sociais e anúncios</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <h2 class="section-title">Nossas <span>Soluções</span></h2>
+  <p class="section-sub">Escolha o pacote, envie suas fotos e receba imagens prontas para vender mais.</p>
+
+  <!-- ROUPAS -->
+  <h3 style="margin-bottom:16px;color:var(--green);">Roupas</h3>
+  <div class="products">
+    <a class="product" href="https://pay.herospark.com/1-transformacoes-de-imagens-para-anuncios-roupas-492880" target="_blank">
+      <img src="imagens/exemplo-roupa.jpg" alt="Exemplo Roupa">
+      <h4>1 Imagem de Roupa</h4>
+      <p>Tratamento profissional para 1 foto.</p>
+      <strong>R$ 14,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/5-transformacoes-de-imagens-para-anuncios-roupas-492796" target="_blank">
+      <img src="imagens/exemplo-roupa.jpg" alt="Exemplo Roupa">
+      <h4>5 Imagens de Roupa</h4>
+      <p>Ideal para pequenos catálogos.</p>
+      <strong>R$ 54,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/transformacao-de-imagens-para-anuncios-492768" target="_blank">
+      <img src="imagens/exemplo-roupa.jpg" alt="Exemplo Roupa">
+      <h4>10 Imagens de Roupa</h4>
+      <p>Volume ideal para lojas.</p>
+      <strong>R$ 89,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/20-transformacoes-de-imagens-para-anuncios-de-roupas-que-vendem-mais-492899" target="_blank">
+      <img src="imagens/exemplo-roupa.jpg" alt="Exemplo Roupa">
+      <h4>20 Imagens de Roupa</h4>
+      <p>Escala máxima.</p>
+      <strong>R$ 149,90</strong>
+    </a>
+  </div>
+
+  <!-- COMIDAS -->
+  <h3 style="margin:40px 0 16px;color:var(--green);">Comidas</h3>
+  <div class="products">
+    <a class="product" href="https://pay.herospark.com/1-transformacoes-de-imagens-para-anuncios-comidas-492882" target="_blank">
+      <img src="imagens/exemplo-comida.jpg" alt="Exemplo Comida">
+      <h4>1 Imagem de Comida</h4>
+      <strong>R$ 14,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/5-transformacoes-de-imagens-para-anuncios-comidas-492794" target="_blank">
+      <img src="imagens/exemplo-comida.jpg" alt="Exemplo Comida">
+      <h4>5 Imagens de Comida</h4>
+      <strong>R$ 54,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/10-transformacoes-de-imagens-para-anuncios-comidas-492790" target="_blank">
+      <img src="imagens/exemplo-comida.jpg" alt="Exemplo Comida">
+      <h4>10 Imagens de Comida</h4>
+      <strong>R$ 89,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/20-transformacoes-de-imagens-para-anuncios-de-comidas-que-vendem-mais-copia-492900" target="_blank">
+      <img src="imagens/exemplo-comida.jpg" alt="Exemplo Comida">
+      <h4>20 Imagens de Comida</h4>
+      <strong>R$ 149,90</strong>
+    </a>
+  </div>
+
+  <!-- VEÍCULOS -->
+  <h3 style="margin:40px 0 16px;color:var(--green);">Veículos</h3>
+  <div class="products">
+    <a class="product" href="https://pay.herospark.com/1-transformacoes-de-imagens-para-anuncios-veiculos-492883" target="_blank">
+      <img src="imagens/exemplo-veiculo.jpg" alt="Exemplo Veículo">
+      <h4>1 Imagem de Veículo</h4>
+      <strong>R$ 14,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/5-transformacoes-de-imagens-para-anuncios-veiculos-492793" target="_blank">
+      <img src="imagens/exemplo-veiculo.jpg" alt="Exemplo Veículo">
+      <h4>5 Imagens de Veículo</h4>
+      <strong>R$ 54,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/10-transformacoes-de-imagens-para-anuncios-veiculos-492792" target="_blank">
+      <img src="imagens/exemplo-veiculo.jpg" alt="Exemplo Veículo">
+      <h4>10 Imagens de Veículo</h4>
+      <strong>R$ 89,90</strong>
+    </a>
+
+    <a class="product" href="https://pay.herospark.com/20-transformacoes-de-imagens-para-anuncios-de-veiculos-que-vendem-mais-492901" target="_blank">
+      <img src="imagens/exemplo-veiculo.jpg" alt="Exemplo Veículo">
+      <h4>20 Imagens de Veículo</h4>
+      <strong>R$ 149,90</strong>
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 VisionUp Studio — Imagens que vendem.
+</footer>
+
+</body>
+</html>
